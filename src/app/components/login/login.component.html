@@ -1,0 +1,25 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div animated fadeInLeft">
+    <mat-card fxFlex="25">
+        <mat-toolbar color="primary">
+            <span>Movie App </span>
+          </mat-toolbar>
+        <form fxLayoutAlign="streth" fxLayout="column" class="login-form" (ngSubmit)="onSubmit( loginForm )" #loginForm = "ngForm">
+            <span *ngIf="loginForm.submitted && loginForm.controls['email'].errors" 
+           class=" animated fadeIn text-danger"> El nombre es obligatorio</span>
+            <mat-form-field >
+              <input matInput placeholder="Email" name="email" [(ngModel)]="user.email" required>
+            </mat-form-field>
+            <span *ngIf="loginForm.submitted && loginForm.controls['pass'].errors" 
+           class=" animated fadeIn text-danger">La contraseña es obligatorio</span>
+            <mat-form-field >
+                <input matInput type="password" placeholder="password" name="pass" [(ngModel)]="user.pass" required>
+            </mat-form-field>
+            <div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100" class="text-center" style="color: white;">
+                <span>¿No tienes cuenta?
+                    <a [routerLink]="['/registro']">Registrarme</a>
+                </span>
+            </div>
+            <button mat-raised-button color="accent">Login</button>
+          </form>
+    </mat-card>
+</div>

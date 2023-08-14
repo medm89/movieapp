@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-sm ">
+  <div fxLayout="row" fxLayoutAlign="space-around center" >
+    <div fxFlex="20%" fxLayoutAlign="space-around center">
+      <a routerLink="/pages" class="text-center">Inicio</a>
+      <a routerLink="/pages/favoritos" class="text-center">Películas</a>
+    </div>
+    <div fxFlex="50%" fxLayout="row" fxLayoutAlign="center center">
+      <mat-form-field >
+        <input matInput #txtBuscar
+        (keyup.enter)="searchMovie( txtBuscar.value )"
+        type="search"
+        placeholder="Buscar película"
+        aria-label="Search" >
+      </mat-form-field>
+<button style="margin-left: 20px;" fxLayoutAlign="center" mat-raised-button color="primary" (click)="searchMovie( txtBuscar.value )"
+       class="btn btn-outline-success" type="submit">Buscar</button>
+    </div>
+</div>
+</nav>

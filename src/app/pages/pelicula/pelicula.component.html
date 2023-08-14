@@ -1,0 +1,36 @@
+
+<app-navbar></app-navbar>
+<hr>
+<div fxLayout="row" fxLayoutAlign="space-around center" class=" animated fadeInLeft" *ngIf="movie">
+      <mat-card class="card" >
+          <mat-card-content>
+            <div fxLayout="row" fxLayoutAlign="space-around center"> 
+                <h1>{{ movie.title }}</h1>
+            </div>           
+        </mat-card-content>
+        <mat-card-content>
+            <div fxFlex="row" fxLayoutAlign="space-around center">
+                <div fxFlex="20%">                
+                    <img [src]="movie.poster_path | poster" 
+                     [alt]="movie.title"
+                     class="img-thumbnail" class="poster responsive-image">
+                </div>
+                <div fxFlex="30%">
+                    {{ movie.overview }}
+                    <mat-divider style="margin:10px auto 10px auto;"></mat-divider>
+                    <span>Rank:{{ movie.vote_average | number:'1.1-2' }}</span>
+                    <mat-divider style="margin:10px auto 10px auto;"></mat-divider>
+                    <button mat-raised-button color="accent" class="btn btn-outline-info"
+                            (click)="onRegresar()">
+                        Regresar
+                    </button>
+                    <button mat-raised-button [color]="isfav ? 'warn' : 'primary'" class="btn btn-outline-info"
+                    (click)="saveFav()">
+                        <span *ngIf="!isfav"> Guardar en favorito</span>
+                        <span *ngIf="isfav"> Eliminar de favoritos</span>
+                     </button>
+                </div>
+            </div>
+        </mat-card-content>
+      </mat-card>
+</div>

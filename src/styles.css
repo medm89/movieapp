@@ -1,1 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: white; }
+.main-div mat-card{
+    padding: 0;
+
+}
+.login-form{
+    padding: 2px;
+}
+.text-danger{
+    color:#dc3545 !important;
+    background-color: white;
+    font-weight: bold;
+}
+a.text-danger:focus,
+a.text-danger:hover{
+    color:#a71d2a!important
+}
+.text-center, .text-center span a{
+    color: white;
+}
+.container-flex {
+    display: flex;
+    flex-direction: column; /* Establecer dirección de columna para que los elementos se apilen verticalmente */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    margin: 0 auto; /* Centrar horizontalmente el contenedor */
+    width: 100%;
+  }
+  
+  .mt-5 {
+    margin-top: 2.5%; /* Aplicar margen superior de 5 unidades */
+  }
+  .text-white{
+    color: white;
+  }
+
+  section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+  .poster {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin: 5px
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh; /* Ejemplo: ajustar al alto de la pantalla */
+  }
+  
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+  }
+  .place{
+    padding: 10px;
+  }

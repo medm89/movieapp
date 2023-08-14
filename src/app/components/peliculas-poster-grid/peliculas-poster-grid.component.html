@@ -1,0 +1,15 @@
+<div fxLayout="row wrap" fxLayoutGap="16px" class="animate animated animate__fadeIn flex-container">
+    <div fxFlex="calc(25% - 16px)"  *ngFor="let movie of movies">
+      <mat-card class="place" (click)="onMovieClick(movie)">
+        <img [src]="movie.poster_path | poster" class="poster responsive-image">
+        <mat-card-content>
+          <h3 class="text-white">{{ movie.title }}</h3>
+          <div fxLayout="row">
+            <div fxFlex="70%" fxLayout="row" fxLayoutAlign="start center">
+              <span class="rating-text text-white">{{ movie.vote_average | number:'1.1-2' }}</span>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>

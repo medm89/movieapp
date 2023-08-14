@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<mat-card>
+    <mat-card-header>
+      <mat-card-title><h1>Cartelera</h1></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div *ngIf="movies.length > 0" style=" overflow: hidden; position: relative;">
+            <app-slidershow [movies]="movies"></app-slidershow>
+        </div>
+        <h1 class="mt-5">Peliculas</h1>
+        <app-peliculas-poster-grid *ngIf="movies.length > 2" [movies]="movies"></app-peliculas-poster-grid>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,20 @@
+mat-sidenav-container, mat-sidena-content, mat-sidenav{
+    height: 7vh;
+}
+mat-sidenav{
+    width :256px;
+}
+main{
+    padding: 10px;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+@media (max-width: 600px) {
+    .mobile-hidden {
+      display: none;
+    }
+  }
+.mt-5{
+    margin-top: 2%;
+}

@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+<hr>
+<mat-card>
+    <mat-card-header>
+      <mat-card-title><h1>Buscar películas <small> {{ texto }} </small></h1></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <app-peliculas-poster-grid [movies]="movies"></app-peliculas-poster-grid>
+    </mat-card-content>
+  </mat-card>
