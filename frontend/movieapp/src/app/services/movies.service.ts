@@ -67,6 +67,14 @@ export class MoviesService {
     const params = { movieid: id };
       return this.http.post<FavResponse>(`${ environment.apiUrl }/api/movies/saveFav`,params,{headers});
   }
+  getMovieFav(){
+    let token = localStorage.getItem('token') || '';
+    const headers = new HttpHeaders({
+      Authorization: token
+    });
+    const params = {  };
+      return this.http.post<Movie[]>(`${ environment.apiUrl }/api/movies/getFav`,params,{headers});
+  }
   resetPage() {
     this.moviesPage = 1;
   }

@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "c55a213b-ef96-4e23-819d-db73bf594623",
+		"name": "moviesApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3621052"
+	},
+	"item": [
+		{
+			"name": "listado peliculas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGQ1MTY4OWU0M2UxMWQ1NzkxMzRlOGYiLCJpYXQiOjE2OTE2OTc2MzYsImV4cCI6MTY5MTcwMTIzNn0.6fISMMPaq4D1nV5p8IPO7R_E9NVYiQZedQSFFn69TQI",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/api/movies/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"movies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"medm891@gmail.com\",\r\n    \"pass\": \"123rtin456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/auth/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Martin Diaz Mora\",\r\n    \"email\":\"medm891@gmail.com\",\r\n    \"pass\": \"123rtin456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/users/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "busqueda peliculas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGQ1MTY4OWU0M2UxMWQ1NzkxMzRlOGYiLCJpYXQiOjE2OTE3MDIyMjMsImV4cCI6MTY5MTcwNTgyM30.PIaD0BEgXdlTFruy-Dj_JYDRf0FFyEYGOigLiL1K_c4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/api/movies/search?search=spi",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"movies",
+						"search"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "spi"
+						},
+						{
+							"key": "movieId",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "movieId",
+							"value": "129",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pelicula favorita",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGQ1MTY4OWU0M2UxMWQ1NzkxMzRlOGYiLCJpYXQiOjE2OTE3MjU4MTksImV4cCI6MTY5MTcyOTQxOX0.CJVvFHK3nsI8Pxq_iJ6IeYfs7IHj5X4cWesQ3qnbQhc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieid\": \"129\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/movies/saveFav",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"movies",
+						"saveFav"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener peliculas favoritas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGQ2YzViN2UwNDlhYzdiNmIwN2EwODEiLCJpYXQiOjE2OTE5NDc0MjcsImV4cCI6MTY5MTk1MTAyN30.qOmYPXFMosV4RFMfEEBak-yqHo3bShIBfw3Ez3hCr-g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/api/movies/getFav",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"movies",
+						"getFav"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agregar nota",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGQ1MTY4OWU0M2UxMWQ1NzkxMzRlOGYiLCJpYXQiOjE2OTE3MjU4MTksImV4cCI6MTY5MTcyOTQxOX0.CJVvFHK3nsI8Pxq_iJ6IeYfs7IHj5X4cWesQ3qnbQhc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieid\": \"129\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/movies/saveFav",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"movies",
+						"saveFav"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener nota",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGQ1MTY4OWU0M2UxMWQ1NzkxMzRlOGYiLCJpYXQiOjE2OTE3MjU4MTksImV4cCI6MTY5MTcyOTQxOX0.CJVvFHK3nsI8Pxq_iJ6IeYfs7IHj5X4cWesQ3qnbQhc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieid\": \"129\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/movies/getNotes",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"movies",
+						"getNotes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
